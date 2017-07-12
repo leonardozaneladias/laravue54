@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace Laravue54\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;

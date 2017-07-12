@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Laravue54\Http\Controllers\Auth;
 
-use App\User;
-use App\Http\Controllers\Controller;
+use Laravue54\User;
+use Laravue54\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
