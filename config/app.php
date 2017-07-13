@@ -21,11 +21,11 @@ return [
     |
     | This value determines the "environment" your application is currently
     | running in. This may determine how you prefer to configure various
-    | services your application utilizes. Set this in your ".env" file.
+    | services your application utilizes. Set this in your ".env.bkp" file.
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -177,6 +177,9 @@ return [
         Laravue54\Providers\EventServiceProvider::class,
         Laravue54\Providers\RouteServiceProvider::class,
 
+        Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
+        Bootstrapper\BootstrapperL5ServiceProvider::class,
+
     ],
 
     /*
@@ -225,6 +228,32 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'FormBuilder' => Kris\LaravelFormBuilder\Facades\FormBuilder::class,
+
+        //Bootstrapper
+        'Accordion' => Bootstrapper\Facades\Accordion::class,
+        'Alert' => Bootstrapper\Facades\Alert::class,
+        'Badge' => Bootstrapper\Facades\Badge::class,
+        'Breadcrumb' => Bootstrapper\Facades\Breadcrumb::class,
+        'Button' => Bootstrapper\Facades\Button::class,
+        'ButtonGroup' => Bootstrapper\Facades\ButtonGroup::class,
+        'Carousel' => Bootstrapper\Facades\Carousel::class,
+        'ControlGroup' => Bootstrapper\Facades\ControlGroup::class,
+        'DropdownButton' => Bootstrapper\Facades\DropdownButton::class,
+        'Helpers' => Bootstrapper\Facades\Helpers::class,
+        'Icon' => Bootstrapper\Facades\Icon::class,
+        'InputGroup' => Bootstrapper\Facades\InputGroup::class,
+        'Image' => Bootstrapper\Facades\Image::class,
+        'Label' => Bootstrapper\Facades\Label::class,
+        'MediaObject' => Bootstrapper\Facades\MediaObject::class,
+        'Modal' => Bootstrapper\Facades\Modal::class,
+        'Navbar' => Bootstrapper\Facades\Navbar::class,
+        'Navigation' => Bootstrapper\Facades\Navigation::class,
+        'Panel' => Bootstrapper\Facades\Panel::class,
+        'ProgressBar' => Bootstrapper\Facades\ProgressBar::class,
+        'Tabbable' => Bootstrapper\Facades\Tabbable::class,
+        'Table' => Bootstrapper\Facades\Table::class,
+        'Thumbnail' => Bootstrapper\Facades\Thumbnail::class,
 
     ],
 
