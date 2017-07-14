@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c4e4ac6a6c6fe68e34eaebaf1f34793",
+    "content-hash": "734e7c2311546153e2843d280fe48193",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -237,16 +237,16 @@
         },
         {
             "name": "kris/laravel-form-builder",
-            "version": "1.12.0",
+            "version": "1.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kristijanhusak/laravel-form-builder.git",
-                "reference": "772f3db2004c4dc9b356eaf49ad6ff48ee75fb7a"
+                "reference": "97eb09512b31cb41787e315ef2f4f6a6137c5337"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kristijanhusak/laravel-form-builder/zipball/772f3db2004c4dc9b356eaf49ad6ff48ee75fb7a",
-                "reference": "772f3db2004c4dc9b356eaf49ad6ff48ee75fb7a",
+                "url": "https://api.github.com/repos/kristijanhusak/laravel-form-builder/zipball/97eb09512b31cb41787e315ef2f4f6a6137c5337",
+                "reference": "97eb09512b31cb41787e315ef2f4f6a6137c5337",
                 "shasum": ""
             },
             "require": {
@@ -262,7 +262,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6.x-dev"
+                    "dev-master": "1.12.x-dev"
                 }
             },
             "autoload": {
@@ -287,7 +287,7 @@
                 }
             ],
             "description": "Laravel form builder - symfony like",
-            "time": "2017-05-28T20:01:06+00:00"
+            "time": "2017-05-29T08:16:44+00:00"
         },
         {
             "name": "laravel/framework",
