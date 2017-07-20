@@ -24,7 +24,7 @@ Route::prefix('admin')->group(function (){
         'middleware' => 'auth',
     ], function (){
         Route::name('dashboard')->get('/dashboard', function () {
-            return view('admin.');
+            return 'My Dashboard';
         });
         Route::resource('users', 'UsersController');
     });
