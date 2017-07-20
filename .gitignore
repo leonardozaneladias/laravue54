@@ -5,9 +5,7 @@
 /vendor
 /.idea
 /.vagrant
-Homestead.json
-Homestead.yaml
 npm-debug.log
-#.env
+Homestead.json
 _ide_helper.php
 .phpstorm.meta.php
