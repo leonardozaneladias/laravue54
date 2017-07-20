@@ -13,7 +13,8 @@ class UsersTableSeeder extends Seeder
     {
         factory(\Laravue54\Models\User::class)->create([
             'name' => 'Admin',
-            'email' => 'admin@laravue54.edu'
+            'email' => 'admin@laravue54.edu',
+            'enrolment' => 100000,
         ]);
     }
 }

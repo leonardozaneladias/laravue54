@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-07-13.
+    * Generated on 2017-07-20.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -11,6 +11,7 @@ namespace PHPSTORM_META {
     override(new \Illuminate\Contracts\Container\Container, map([
         '' => '@',
         'events' => Illuminate\Events\Dispatcher::class,
+        'log' => Illuminate\Log\Writer::class,
         'router' => Illuminate\Routing\Router::class,
         'url' => Illuminate\Routing\UrlGenerator::class,
         'redirect' => Illuminate\Routing\Redirector::class,
@@ -26,6 +27,7 @@ namespace PHPSTORM_META {
         'db' => Illuminate\Database\DatabaseManager::class,
         'db.connection' => Illuminate\Database\MySqlConnection::class,
         'Illuminate\Contracts\Queue\EntityResolver' => Illuminate\Database\Eloquent\QueueEntityResolver::class,
+        'encrypter' => Illuminate\Encryption\Encrypter::class,
         'files' => Illuminate\Filesystem\Filesystem::class,
         'filesystem' => Illuminate\Filesystem\FilesystemManager::class,
         'filesystem.disk' => Illuminate\Filesystem\FilesystemAdapter::class,
@@ -74,7 +76,7 @@ namespace PHPSTORM_META {
         'cache.store' => Illuminate\Cache\Repository::class,
         'memcached.connector' => Illuminate\Cache\MemcachedConnector::class,
         'Illuminate\Broadcasting\BroadcastManager' => Illuminate\Broadcasting\BroadcastManager::class,
-        'Illuminate\Contracts\Broadcasting\Broadcaster' => Illuminate\Broadcasting\Broadcasters\NullBroadcaster::class,
+        'Illuminate\Contracts\Broadcasting\Broadcaster' => Illuminate\Broadcasting\Broadcasters\LogBroadcaster::class,
         'Illuminate\Bus\Dispatcher' => Illuminate\Bus\Dispatcher::class,
         'command.cache.clear' => Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => Illuminate\Cache\Console\ForgetCommand::class,
@@ -159,6 +161,7 @@ namespace PHPSTORM_META {
     override(\Illuminate\Contracts\Container\Container::make(0), map([
         '' => '@',
         'events' => Illuminate\Events\Dispatcher::class,
+        'log' => Illuminate\Log\Writer::class,
         'router' => Illuminate\Routing\Router::class,
         'url' => Illuminate\Routing\UrlGenerator::class,
         'redirect' => Illuminate\Routing\Redirector::class,
@@ -174,6 +177,7 @@ namespace PHPSTORM_META {
         'db' => Illuminate\Database\DatabaseManager::class,
         'db.connection' => Illuminate\Database\MySqlConnection::class,
         'Illuminate\Contracts\Queue\EntityResolver' => Illuminate\Database\Eloquent\QueueEntityResolver::class,
+        'encrypter' => Illuminate\Encryption\Encrypter::class,
         'files' => Illuminate\Filesystem\Filesystem::class,
         'filesystem' => Illuminate\Filesystem\FilesystemManager::class,
         'filesystem.disk' => Illuminate\Filesystem\FilesystemAdapter::class,
@@ -222,7 +226,7 @@ namespace PHPSTORM_META {
         'cache.store' => Illuminate\Cache\Repository::class,
         'memcached.connector' => Illuminate\Cache\MemcachedConnector::class,
         'Illuminate\Broadcasting\BroadcastManager' => Illuminate\Broadcasting\BroadcastManager::class,
-        'Illuminate\Contracts\Broadcasting\Broadcaster' => Illuminate\Broadcasting\Broadcasters\NullBroadcaster::class,
+        'Illuminate\Contracts\Broadcasting\Broadcaster' => Illuminate\Broadcasting\Broadcasters\LogBroadcaster::class,
         'Illuminate\Bus\Dispatcher' => Illuminate\Bus\Dispatcher::class,
         'command.cache.clear' => Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => Illuminate\Cache\Console\ForgetCommand::class,
@@ -307,6 +311,7 @@ namespace PHPSTORM_META {
     override(\Illuminate\Contracts\Container\Container::makeWith(0), map([
         '' => '@',
         'events' => Illuminate\Events\Dispatcher::class,
+        'log' => Illuminate\Log\Writer::class,
         'router' => Illuminate\Routing\Router::class,
         'url' => Illuminate\Routing\UrlGenerator::class,
         'redirect' => Illuminate\Routing\Redirector::class,
@@ -322,6 +327,7 @@ namespace PHPSTORM_META {
         'db' => Illuminate\Database\DatabaseManager::class,
         'db.connection' => Illuminate\Database\MySqlConnection::class,
         'Illuminate\Contracts\Queue\EntityResolver' => Illuminate\Database\Eloquent\QueueEntityResolver::class,
+        'encrypter' => Illuminate\Encryption\Encrypter::class,
         'files' => Illuminate\Filesystem\Filesystem::class,
         'filesystem' => Illuminate\Filesystem\FilesystemManager::class,
         'filesystem.disk' => Illuminate\Filesystem\FilesystemAdapter::class,
@@ -370,7 +376,7 @@ namespace PHPSTORM_META {
         'cache.store' => Illuminate\Cache\Repository::class,
         'memcached.connector' => Illuminate\Cache\MemcachedConnector::class,
         'Illuminate\Broadcasting\BroadcastManager' => Illuminate\Broadcasting\BroadcastManager::class,
-        'Illuminate\Contracts\Broadcasting\Broadcaster' => Illuminate\Broadcasting\Broadcasters\NullBroadcaster::class,
+        'Illuminate\Contracts\Broadcasting\Broadcaster' => Illuminate\Broadcasting\Broadcasters\LogBroadcaster::class,
         'Illuminate\Bus\Dispatcher' => Illuminate\Bus\Dispatcher::class,
         'command.cache.clear' => Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => Illuminate\Cache\Console\ForgetCommand::class,
@@ -455,6 +461,7 @@ namespace PHPSTORM_META {
     override(\App::make(0), map([
         '' => '@',
         'events' => Illuminate\Events\Dispatcher::class,
+        'log' => Illuminate\Log\Writer::class,
         'router' => Illuminate\Routing\Router::class,
         'url' => Illuminate\Routing\UrlGenerator::class,
         'redirect' => Illuminate\Routing\Redirector::class,
@@ -470,6 +477,7 @@ namespace PHPSTORM_META {
         'db' => Illuminate\Database\DatabaseManager::class,
         'db.connection' => Illuminate\Database\MySqlConnection::class,
         'Illuminate\Contracts\Queue\EntityResolver' => Illuminate\Database\Eloquent\QueueEntityResolver::class,
+        'encrypter' => Illuminate\Encryption\Encrypter::class,
         'files' => Illuminate\Filesystem\Filesystem::class,
         'filesystem' => Illuminate\Filesystem\FilesystemManager::class,
         'filesystem.disk' => Illuminate\Filesystem\FilesystemAdapter::class,
@@ -518,7 +526,7 @@ namespace PHPSTORM_META {
         'cache.store' => Illuminate\Cache\Repository::class,
         'memcached.connector' => Illuminate\Cache\MemcachedConnector::class,
         'Illuminate\Broadcasting\BroadcastManager' => Illuminate\Broadcasting\BroadcastManager::class,
-        'Illuminate\Contracts\Broadcasting\Broadcaster' => Illuminate\Broadcasting\Broadcasters\NullBroadcaster::class,
+        'Illuminate\Contracts\Broadcasting\Broadcaster' => Illuminate\Broadcasting\Broadcasters\LogBroadcaster::class,
         'Illuminate\Bus\Dispatcher' => Illuminate\Bus\Dispatcher::class,
         'command.cache.clear' => Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => Illuminate\Cache\Console\ForgetCommand::class,
@@ -603,6 +611,7 @@ namespace PHPSTORM_META {
     override(\App::makeWith(0), map([
         '' => '@',
         'events' => Illuminate\Events\Dispatcher::class,
+        'log' => Illuminate\Log\Writer::class,
         'router' => Illuminate\Routing\Router::class,
         'url' => Illuminate\Routing\UrlGenerator::class,
         'redirect' => Illuminate\Routing\Redirector::class,
@@ -618,6 +627,7 @@ namespace PHPSTORM_META {
         'db' => Illuminate\Database\DatabaseManager::class,
         'db.connection' => Illuminate\Database\MySqlConnection::class,
         'Illuminate\Contracts\Queue\EntityResolver' => Illuminate\Database\Eloquent\QueueEntityResolver::class,
+        'encrypter' => Illuminate\Encryption\Encrypter::class,
         'files' => Illuminate\Filesystem\Filesystem::class,
         'filesystem' => Illuminate\Filesystem\FilesystemManager::class,
         'filesystem.disk' => Illuminate\Filesystem\FilesystemAdapter::class,
@@ -666,7 +676,7 @@ namespace PHPSTORM_META {
         'cache.store' => Illuminate\Cache\Repository::class,
         'memcached.connector' => Illuminate\Cache\MemcachedConnector::class,
         'Illuminate\Broadcasting\BroadcastManager' => Illuminate\Broadcasting\BroadcastManager::class,
-        'Illuminate\Contracts\Broadcasting\Broadcaster' => Illuminate\Broadcasting\Broadcasters\NullBroadcaster::class,
+        'Illuminate\Contracts\Broadcasting\Broadcaster' => Illuminate\Broadcasting\Broadcasters\LogBroadcaster::class,
         'Illuminate\Bus\Dispatcher' => Illuminate\Bus\Dispatcher::class,
         'command.cache.clear' => Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => Illuminate\Cache\Console\ForgetCommand::class,
@@ -751,6 +761,7 @@ namespace PHPSTORM_META {
     override(\app(0), map([
         '' => '@',
         'events' => Illuminate\Events\Dispatcher::class,
+        'log' => Illuminate\Log\Writer::class,
         'router' => Illuminate\Routing\Router::class,
         'url' => Illuminate\Routing\UrlGenerator::class,
         'redirect' => Illuminate\Routing\Redirector::class,
@@ -766,6 +777,7 @@ namespace PHPSTORM_META {
         'db' => Illuminate\Database\DatabaseManager::class,
         'db.connection' => Illuminate\Database\MySqlConnection::class,
         'Illuminate\Contracts\Queue\EntityResolver' => Illuminate\Database\Eloquent\QueueEntityResolver::class,
+        'encrypter' => Illuminate\Encryption\Encrypter::class,
         'files' => Illuminate\Filesystem\Filesystem::class,
         'filesystem' => Illuminate\Filesystem\FilesystemManager::class,
         'filesystem.disk' => Illuminate\Filesystem\FilesystemAdapter::class,
@@ -814,7 +826,7 @@ namespace PHPSTORM_META {
         'cache.store' => Illuminate\Cache\Repository::class,
         'memcached.connector' => Illuminate\Cache\MemcachedConnector::class,
         'Illuminate\Broadcasting\BroadcastManager' => Illuminate\Broadcasting\BroadcastManager::class,
-        'Illuminate\Contracts\Broadcasting\Broadcaster' => Illuminate\Broadcasting\Broadcasters\NullBroadcaster::class,
+        'Illuminate\Contracts\Broadcasting\Broadcaster' => Illuminate\Broadcasting\Broadcasters\LogBroadcaster::class,
         'Illuminate\Bus\Dispatcher' => Illuminate\Bus\Dispatcher::class,
         'command.cache.clear' => Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => Illuminate\Cache\Console\ForgetCommand::class,
@@ -899,6 +911,7 @@ namespace PHPSTORM_META {
     override(\resolve(0), map([
         '' => '@',
         'events' => Illuminate\Events\Dispatcher::class,
+        'log' => Illuminate\Log\Writer::class,
         'router' => Illuminate\Routing\Router::class,
         'url' => Illuminate\Routing\UrlGenerator::class,
         'redirect' => Illuminate\Routing\Redirector::class,
@@ -914,6 +927,7 @@ namespace PHPSTORM_META {
         'db' => Illuminate\Database\DatabaseManager::class,
         'db.connection' => Illuminate\Database\MySqlConnection::class,
         'Illuminate\Contracts\Queue\EntityResolver' => Illuminate\Database\Eloquent\QueueEntityResolver::class,
+        'encrypter' => Illuminate\Encryption\Encrypter::class,
         'files' => Illuminate\Filesystem\Filesystem::class,
         'filesystem' => Illuminate\Filesystem\FilesystemManager::class,
         'filesystem.disk' => Illuminate\Filesystem\FilesystemAdapter::class,
@@ -962,7 +976,7 @@ namespace PHPSTORM_META {
         'cache.store' => Illuminate\Cache\Repository::class,
         'memcached.connector' => Illuminate\Cache\MemcachedConnector::class,
         'Illuminate\Broadcasting\BroadcastManager' => Illuminate\Broadcasting\BroadcastManager::class,
-        'Illuminate\Contracts\Broadcasting\Broadcaster' => Illuminate\Broadcasting\Broadcasters\NullBroadcaster::class,
+        'Illuminate\Contracts\Broadcasting\Broadcaster' => Illuminate\Broadcasting\Broadcasters\LogBroadcaster::class,
         'Illuminate\Bus\Dispatcher' => Illuminate\Bus\Dispatcher::class,
         'command.cache.clear' => Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => Illuminate\Cache\Console\ForgetCommand::class,

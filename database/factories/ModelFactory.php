@@ -12,7 +12,7 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(Laravue54\User::class, function (Faker\Generator $faker) {
+$factory->define(Laravue54\Models\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
