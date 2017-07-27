@@ -5,6 +5,7 @@ namespace Laravue54\Models;
 use Bootstrapper\Interfaces\TableInterface;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravue54\Notifications\UserCreated;
 
 class User extends Authenticatable implements TableInterface
 {
@@ -52,6 +53,9 @@ class User extends Authenticatable implements TableInterface
         $user = parent::create($data+['enrolment' => str_random(6)]);
         self::assignEnrolment($user, self::ROLE_ADMIN);
         $user->save();
+        if(isset($data['send_mail'])){
+            $user->notify(new UserCreated());
+        }
         return $user;
     }
 
