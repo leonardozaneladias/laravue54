@@ -54,7 +54,8 @@ class User extends Authenticatable implements TableInterface
         self::assignEnrolment($user, self::ROLE_ADMIN);
         $user->save();
         if(isset($data['send_mail'])){
-            $user->notify(new UserCreated());
+            $token = \Password::broker()->createToken($user);
+            $user->notify(new UserCreated($token));
         }
         return $user;
     }
