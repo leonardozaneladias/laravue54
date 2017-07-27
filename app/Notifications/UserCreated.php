@@ -38,7 +38,7 @@ class UserCreated extends Notification
      * Get the mail representation of the notification.
      *
      * @param  mixed  $notifiable
-     * @return \Illuminate\Notifications\Messages\MailMessage
+     * @return \Illuminate\Notifications\Messages\MailMesUsage
      */
     public function toMail($notifiable)
     {
