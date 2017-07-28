@@ -32,6 +32,11 @@ class User extends Authenticatable implements TableInterface
         'password', 'remember_token',
     ];
 
+    public function userable()
+    {
+        return $this->morphTo();
+    }
+
     /**
      * A list of headers to be used when a table is displayed
      *
