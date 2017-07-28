@@ -5,6 +5,8 @@ namespace Laravue54\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use Laravue54\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Laravue54\Models\Admin;
+use Laravue54\Models\User;
 
 class LoginController extends Controller
 {
@@ -44,6 +46,7 @@ class LoginController extends Controller
         $data = $request->only($this->username(), 'password');
         $usernameKey = $this->usernameKey();
         $data[$usernameKey] = $data[$this->username()];
+        //$data['userable_type'] = Admin::class;
         unset($data[$this->username()]);
         return $data;
     }

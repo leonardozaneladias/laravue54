@@ -21,7 +21,7 @@ Route::prefix('admin')->group(function (){
     Route::group([
         'namespace' => 'Admin\\',
         'as' => 'admin.',
-        'middleware' => 'auth',
+        'middleware' => ['auth', 'can:admin'],
     ], function (){
         Route::name('dashboard')->get('/dashboard', function () {
             return 'My Dashboard';
