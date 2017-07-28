@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'admin@laravue54.edu',
             'enrolment' => 100000,
         ])->each(function (User $user){
-            User::assingRole($user, User::ROLE_TEACHER);
+            User::assingRole($user, User::ROLE_ADMIN);
             $user->save();
         });
 

@@ -27,9 +27,14 @@
             /** @var \Bootstrapper\Navbar $navbar */
             $navbar = Navbar::withBrand(config('app.name'), route('admin.dashboard'))->inverse();
             if(Auth::check()){
-                $arrayLinks = [
-                    ['link' => route('admin.users.index'), 'title' => 'Usuários'],
-                ];
+
+                if(\Gate::allows('admin')){
+                    $arrayLinks = [
+                        ['link' => route('admin.users.index'), 'title' => 'Usuários'],
+                    ];
+                    $navbar->withContent(Navigation::links($arrayLinks));
+                }
+
 
                 $arrayLinksRight = [
                     [
@@ -46,8 +51,8 @@
                     ]
                 ];
 
-                $navbar->withContent(Navigation::links($arrayLinks))
-                        ->withContent(Navigation::links($arrayLinksRight)->right());
+
+                        $navbar->withContent(Navigation::links($arrayLinksRight)->right());
 
                 $formLogout = FormBuilder::plain([
                     'id' => 'logout-form',
