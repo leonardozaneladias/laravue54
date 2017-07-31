@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Laravue54\Models\User;
+use Laravue54\Models\UserProfile;
 
 class UsersTableSeeder extends Seeder
 {
@@ -17,12 +18,16 @@ class UsersTableSeeder extends Seeder
             'email' => 'admin@laravue54.edu',
             'enrolment' => 100000,
         ])->each(function (User $user){
+            $profile = factory(UserProfile::class)->make();
+            $user->profile()->create($profile->toArray());
             User::assingRole($user, User::ROLE_ADMIN);
             $user->save();
         });
 
         factory(User::class, 10)->create()->each(function (User $user){
             if(!$user->userable){
+                $profile = factory(UserProfile::class)->make();
+                $user->profile()->create($profile->toArray());
                 User::assingRole($user, User::ROLE_TEACHER);
                 User::assignEnrolment(new User(), User::ROLE_TEACHER);
                 $user->save();
@@ -31,6 +36,8 @@ class UsersTableSeeder extends Seeder
 
         factory(User::class, 10)->create()->each(function (User $user){
             if(!$user->userable) {
+                $profile = factory(UserProfile::class)->make();
+                $user->profile()->create($profile->toArray());
                 User::assingRole($user, User::ROLE_STUDENT);
                 User::assignEnrolment(new User(), User::ROLE_STUDENT);
                 $user->save();
