@@ -22140,8 +22140,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 url: __WEBPACK_IMPORTED_MODULE_0__services_adminConfig__["a" /* default */].API_URL + '/students',
                 dataType: 'json',
                 delay: 250,
-                proccessResults: function proccessResults(data) {}
-            }
+                data: function data(params) {
+                    return {
+                        q: params.term
+                    };
+                },
+                processResults: function processResults(data) {
+                    return {
+                        results: data.map(function (student) {
+                            return { id: student.id, text: student.user.name };
+                        })
+                    };
+                }
+            },
+            minimumInputLength: 2
         });
     }
 });

@@ -41,10 +41,20 @@
                     url: `${ADMIN_CONFIG.API_URL}/students`,
                     dataType: 'json',
                     delay: 250,
-                    proccessResults(data){
-
+                    data(params){
+                        return {
+                            q: params.term
+                        }
+                    },
+                    processResults(data){
+                        return {
+                            results: data.map((student) => {
+                                return {id: student.id, text: student.user.name}
+                            })
+                        }
                     }
-                }
+                },
+                minimumInputLength:2
             });
         }
 
