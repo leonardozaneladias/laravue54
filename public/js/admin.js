@@ -1734,12 +1734,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
-/* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        console.log('Component mounted.');
-    }
-});
+/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 /* 31 */
@@ -31799,19 +31800,18 @@ module.exports = Component.exports
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _vm._m(0)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "container"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
-  }, [_c('div', {
-    staticClass: "panel panel-default"
-  }, [_c('div', {
-    staticClass: "panel-heading"
-  }, [_vm._v("Example Component")]), _vm._v(" "), _c('div', {
-    staticClass: "panel-body"
-  }, [_vm._v("\n                    I'm an example component!\n                ")])])])])])
+  return _c('div', [_c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    staticClass: "control-label"
+  }, [_vm._v("Selecionar Estudantes")]), _vm._v(" "), _c('select', {
+    staticClass: "form-control",
+    attrs: {
+      "name": "students"
+    }
+  })]), _vm._v(" "), _c('table', {
+    staticClass: "table table-bordered"
+  }, [_c('thead', [_c('tr', [_c('th'), _vm._v(" "), _c('th', [_vm._v("Nome")])])]), _vm._v(" "), _c('tbody')])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
