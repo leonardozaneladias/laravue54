@@ -14,10 +14,12 @@ class ClassInformation extends Model implements TableInterface
         'semester',
         'year'
     ];
+
     protected $dates = [
         'date_start', //Carbon wrapper \DateTime
         'date_end'
     ];
+
     public function students()
     {
         return $this->belongsToMany(Student::class);
